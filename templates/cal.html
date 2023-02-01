@@ -1,0 +1,18 @@
+{% comment %} {% extends 'layout.html' %}
+
+
+
+{% block content %} {% endcomment %}
+
+<h1>Result is {{output}}</h1>
+
+<form action="/sum" method="POST" style="padding:100px">
+    {% csrf_token %}
+    <input type="text" name="val1" placeholder="Enter Value 1"  style="padding:12px" />
+    <input type="text" name="val2" placeholder="Enter Value 2" style="padding:12px" />
+
+    <button type="submit"  style="padding:12px; background-color:green; color:white" >Add</button>
+</form>
+    
+
+{% comment %} {% endblock %} {% endcomment %}
